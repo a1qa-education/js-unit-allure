@@ -75,10 +75,24 @@ export class Input extends BaseElement {
     }
 
     /**
+     * Get text of the Input element
+     * @returns {Promise<string>} Text from element
+     */
+    async getText() {
+        Logger.info(`${this.log()}Get value from element`);
+        await this.state().waitForExist();
+
+        const element = await this._get$();
+        const value = await element.getText();
+        Logger.info(`Text: "${value}"`);
+        return value;
+    }
+
+    /**
      * Get value of the Input element
      * @returns {Promise<string>} Value from element
      */
-    async getText() {
+    async getValue() {
         Logger.info(`${this.log()}Get value from element`);
         await this.state().waitForExist();
 

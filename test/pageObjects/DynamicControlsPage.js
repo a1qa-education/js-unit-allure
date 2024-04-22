@@ -23,7 +23,7 @@ class DynamicControlsPage extends BasePage {
     }
 
     async getText() {
-        return await this.inputField.getText();
+        return await this.inputField.getValue();
     }
 }
 
