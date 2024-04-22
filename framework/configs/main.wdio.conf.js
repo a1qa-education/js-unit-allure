@@ -8,13 +8,12 @@ export const mainConfig = {
     exclude: [
     ],
     maxInstances: 1,
-    logLevel: 'warn',
+    logLevel: 'info',
     bail: 0,
     waitforTimeout: 0,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
     framework: 'mocha',
-    reporters: ['spec'],
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
