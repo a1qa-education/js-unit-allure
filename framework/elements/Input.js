@@ -83,7 +83,7 @@ export class Input extends BaseElement {
         await this.state().waitForExist();
 
         const element = await this._get$();
-        const value = await element.getText();
+        const value = await element.getValue();
         Logger.info(`Value: "${value}"`);
         return value;
     }

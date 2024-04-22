@@ -2,7 +2,11 @@
   "name": "a1qa-wdio-framework",
   "type": "module",
   "scripts": {
-    "chrome.mocha": "wdio run ./configs/chrome.mocha.conf.js"
+    "chrome.mocha": "wdio run ./configs/chrome.mocha.conf.js",
+    "test:alert": "wdio run ./configs/chrome.mocha.conf.js --spec ./test/specs/AlertTest.js",
+    "test:data:table": "wdio run ./configs/chrome.mocha.conf.js --spec ./test/specs/DataTablesTest.js",
+    "test:dynamic:controls": "wdio run ./configs/chrome.mocha.conf.js --spec ./test/specs/DynamicControlsTest.js",
+    "test:file:download": "wdio run ./configs/chrome.mocha.conf.js --spec ./test/specs/FileDownloadTest.js"
   },
   "dependencies": {
     "@babel/core": "^7.24.3",
